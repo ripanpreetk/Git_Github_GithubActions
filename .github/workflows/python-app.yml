@@ -30,11 +30,10 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
   Testing_build:
-    if: ${{ failure() }}
     needs: build
     runs-on: ubuntu-latest
     
     steps: 
         - name: Testing the Mathfunctions
-          run: python3 testMathfunctions.py
-
+          run: |
+            python3 testMathfunctions.py
