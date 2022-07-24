@@ -36,4 +36,4 @@ jobs:
     steps: 
         - name: Testing the Mathfunctions
           run: |
-            python3 testMathfunctions.py
+            python3 ${{ GITHUB_WORKSPACE }}/testMathfunctions.py
