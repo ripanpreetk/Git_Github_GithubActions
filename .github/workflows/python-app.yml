@@ -28,6 +28,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Test with test.py
-      run: |
-       python3 testMathfunctions.py
+          build:
+
+
+  Testing_build:
+  
+    runs-on: ubuntu-latest
+    
+    steps: 
+        - name: Testing the Mathfunctions
+          run: python3 testMathfunctions.py
+
+    
